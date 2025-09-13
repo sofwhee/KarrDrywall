@@ -146,7 +146,7 @@
 /* Desktop - 1300px (To make image background parallax) */
 @media only screen and (min-width: 81.25rem) {
     #hero-143 {
-        background: url("/assets/images/landing.jpg");
+        // background: url("/assets/images/landing.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -156,24 +156,6 @@
         .cs-background {
             img {
                 display: none;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-143 {
-            &:before,
-            &:after {
-                background: var(--dark);
-            }
-
-            .cs-background {
-                &:before {
-                    opacity: 0.85;
-                }
             }
         }
     }
@@ -292,7 +274,14 @@
     #h-services-143 {
         .cs-card-group {
             max-width: calc(1280 / 16 * 1rem);
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            gap: 4rem;
+        
+          .cs-card-group-group {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+          }
         }
 
         .cs-item {
@@ -304,25 +293,3 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #h-services-143 {
-            .cs-card-group {
-                background: var(--medium);
-            }
-
-            .cs-icon {
-                background: var(--darkTint);
-            }
-
-            .cs-title {
-                color: #fff;
-            }
-
-            .cs-text {
-                color: #fff;
-            }
-        }
-    }
-}
