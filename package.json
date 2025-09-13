@@ -9,7 +9,7 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "start": "run-p watch:*",
         "build": "run-s build:*",
-        "build-ghpages": "npx @11ty/eleventy --pathprefix=/your-repo-name/",
+        "build-ghpages": "npx @11ty/eleventy --pathprefix=/KarrDrywall/",
     },
     "repository": {
         "type": "git",
