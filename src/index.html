@@ -42,6 +42,35 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <a href="/contact/" class="cs-button-solid">Get in Touch</a>
         </div>
 
+        <div class="slider">
+          <div class="slide-track">
+
+            <!-- SLIDES -->
+            <picture class="slide">
+              <!-- look up how to do this image with this template-->
+              <!-- <img src=''/> -->
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
+              <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
+              <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
+              <!--Tablet Image-->
+              <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+              <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+              <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+              <!--Large Tablet Image-->
+              <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+              <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+              <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+              <!--Desktop Image-->
+              <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+              <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
+              <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
+              <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+            </picture>
+
+          </div>
+        </div>
+
         <!-- Background Image -->
         <picture class="cs-background">
             <!--Mobile Image-->
@@ -73,7 +102,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
           <ul id="top-card" class="cs-card-group-group">
             <li class="cs-item">
               <picture class="cs-icon">
-                  <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                  <img loading="lazy" decoding="async" src="/assets/svgs/b-house.svg" alt="icon" width="52" height="52" aria-hidden="true">
               </picture>
               <h2 class="cs-title">Remodeling</h2>
               <p class="cs-text">
@@ -82,7 +111,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             </li>
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/b-blueprint.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">New Construction</h2>
                 <p class="cs-text">
@@ -91,7 +120,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             </li>
             <li class="cs-item">
               <picture class="cs-icon">
-                  <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                  <img loading="lazy" decoding="async" src="/assets/svgs/b-office.svg" alt="icon" width="52" height="52" aria-hidden="true">
               </picture>
               <h2 class="cs-title">Commercial Build-out</h2>
               <p class="cs-text">
@@ -102,7 +131,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
           <ul class="cs-card-group-group">
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/b-tools.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">Metal Framing and Drywall</h2>
                 <p class="cs-text">
@@ -111,7 +140,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             </li>
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/b-trowel.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">Stucco and Moldings</h2>
                 <p class="cs-text">
@@ -120,7 +149,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             </li>
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/b-paint.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">Painting Services</h2>
                 <p class="cs-text">
@@ -191,13 +220,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </p>
                 <div class="cs-quote">
                     <span class="cs-quote-text">
-
+                      This is where I would say something.
                     </span>
                     <span class="cs-name">Karr Drywall</span>
                     <span class="cs-job">CEO-Founder</span>
                     <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
                 </div>
-                <a href="/about/" class="cs-button-solid">About Us</a>
             </div>
         </div>
     </section>
@@ -206,6 +234,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <!--                   Gallery                    -->
     <!-- ============================================ -->
 
+    <!-- gallery -->
     <section id="gallery-48">
         <div class="cs-container">
             <div class="cs-content">
@@ -365,9 +394,11 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                 </div>
             </div>
-            <a href="/project-one/" class="cs-button-solid">View a Project</a>
+            <!-- <a href="/project-one/" class="cs-button-solid">View a Project</a> -->
         </div>
     </section>
+
+    -->
 
     <!-- ============================================ -->
     <!--                   Reviews                    -->
@@ -377,10 +408,6 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <div class="cs-container">
             <div class="cs-content">
                 <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">Words From Our Customers</h2>
-                <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
             </div>
             <ul class="cs-card-group">
                 <!-- Review 1 -->
@@ -412,7 +439,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     </div>
                 </li>
             </ul>
-            <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
+            <!-- <a href="/reviews/" class="cs-button-solid">Read All Reviews</a> -->
         </div>
     </section>
 
