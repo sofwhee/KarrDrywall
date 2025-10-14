@@ -17,7 +17,7 @@
         --primary: #223770;
         --primaryLight: #264fc2;
         --secondary: #eeee1d;
-        --secondaryLight: #e8e85a;
+        --secondaryLight: #fcfca0;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
@@ -101,13 +101,14 @@
       padding-left: 4.8rem; // translating 50% to the left gets messed up when using gap property, since gap property only adds space in between entries. So we add extra padding here.
       gap: 4.8rem;
       width: max-content;
-      animation: marquee-move-text 10s linear infinite;
+      animation: marquee-move-text 20s linear infinite;
     }
 
     .marquee-text p {
       font-size: 2rem;
       font-weight: 700;
       text-wrap: nowrap;
+      color: var(--secondaryLight);
     }
 
     @keyframes marquee-move-text {
@@ -901,7 +902,7 @@
                 content: "";
                 width: 0%;
                 height: 2px;
-                background: var(--secondaryLight);
+                background: var(--secondary);
                 opacity: 1;
                 display: block;
                 position: absolute;
