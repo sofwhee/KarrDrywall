@@ -12,13 +12,12 @@
 /* CodeStitch Core Styles + Reset */
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    :root {
-        --primary: #551A8B;
-        --primaryLight: #ffba43;
-        --primaryDark: #441b69;
-        --secondary: #ffff52;
-        --secondaryLight: #ffba43;
-        --secondaryDark: #ffff52;
+    :root,
+    ::before {
+        --primary: #223770;
+        --primaryLight: #264fc2;
+        --secondary: #eeee1d;
+        --secondaryLight: #e8e85a;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
@@ -87,6 +86,41 @@
         margin: 0;
         color: var(--bodyTextColor);
     }
+
+    .marquee-wrapper {
+      padding: 4.8rem 0px;
+      color: white;
+    }
+
+    .marquee-text {
+      overflow: clip;
+    }
+
+    .marquee-text-track {
+      display: flex;
+      padding-left: 4.8rem; // translating 50% to the left gets messed up when using gap property, since gap property only adds space in between entries. So we add extra padding here.
+      gap: 4.8rem;
+      width: max-content;
+      animation: marquee-move-text 10s linear infinite;
+    }
+
+    .marquee-text p {
+      font-size: 2rem;
+      font-weight: 700;
+      text-wrap: nowrap;
+    }
+
+    @keyframes marquee-move-text {
+      to {
+        transform: translatex(-50%)
+      }
+    }
+
+    .fadeout-horizontal {
+      mask-image: linear-gradient(
+        to right, transparent, black 5rem, black calc(100% - 5rem), transparent
+      );
+    }
 }
 
 /* Components + Utilities */
@@ -123,7 +157,7 @@
         text-align: center;
 
         &:hover {
-            color: #8823e3;
+            color: var(--primaryLight);
 
             &:before {
                 width: 100%;
@@ -138,7 +172,7 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #f5f562;
+            background-color: var(--secondaryLight);
             height: 100%;
 
             //Transition properties
@@ -798,7 +832,7 @@
         }
 
         .cs-header-title {
-            text-decoration-color: #d1d11d;
+            text-decoration-color: var(--secondary);
             font-size: 32px;
             font-weight: 900;
         }
@@ -867,7 +901,7 @@
                 content: "";
                 width: 0%;
                 height: 2px;
-                background: var(--primary);
+                background: var(--secondaryLight);
                 opacity: 1;
                 display: block;
                 position: absolute;
@@ -877,7 +911,7 @@
             }
         }
 
-          .cs-phone {
+        .cs-phone {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -887,7 +921,6 @@
 
             picture img {
               display: block;
-
             }
         }
     }

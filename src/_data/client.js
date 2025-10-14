@@ -1,8 +1,8 @@
 module.exports = {
     name: "Karr Brothers Drywall Inc",
     email: "info@karrbrothersdrywallinc.com",
-    phoneForTel: "239-634-719",
-    phoneFormatted: "(239) 634-719",
+    phoneForTel: "239 332-2488",
+    phoneFormatted: "(239) 332-2488",
     address: {
         lineOne: "30 Work Dr",
         lineTwo: "B9",
