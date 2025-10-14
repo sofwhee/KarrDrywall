@@ -122,6 +122,57 @@
         to right, transparent, black 5rem, black calc(100% - 5rem), transparent
       );
     }
+
+    .cs-logo-group {
+      height: 100%;
+    }
+
+    .cs-logo {
+        /* 210px - 240px */
+        width: clamp(13.125rem, 8vw, 15rem);
+        height: auto;
+        display: block;
+        /* 28px - 44px */
+        margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
+    }
+
+    .cs-logo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cs-text {
+        color: var(--bodyTextColorWhite);
+        margin-bottom: calc(16 / 16 * 1rem);
+    }
+
+    .cs-social {
+        display: flex;
+        gap: calc(12 / 16 * 1rem);
+    }
+
+    .cs-social-link {
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: #4e4b66;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: transform 0.3s, background-color 0.3s;
+
+        &:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-0.1875rem);
+        }
+    }
+
+    .cs-social-img {
+        height: 1rem;
+        width: auto;
+        display: block;
+    }
 }
 
 /* Components + Utilities */
@@ -805,7 +856,7 @@
         width: 100%;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-        padding: 0 calc(16 / 16 * 1rem);
+        padding: 1rem;
         background-color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: fixed;
@@ -910,6 +961,12 @@
                 left: 0;
                 transition: width 0.3s;
             }
+        }
+
+        .contact {
+          display: flex;
+          align-items: center;
+          gap: 2.4rem;
         }
 
         .cs-phone {
@@ -1141,65 +1198,6 @@
             flex-wrap: wrap;
             column-gap: calc(88 / 16 * 1rem);
             row-gap: calc(32 / 16 * 1rem);
-        }
-
-        .cs-logo-group {
-            /* takes up all the space, lets the other ul's wrap below it */
-            width: 100%;
-            position: relative;
-        }
-
-        .cs-logo {
-            /* 210px - 240px */
-            width: clamp(13.125rem, 8vw, 15rem);
-            height: auto;
-            display: block;
-            /* 28px - 44px */
-            margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
-        }
-
-        .cs-logo-img {
-            width: 100%;
-            height: auto;
-        }
-
-        .cs-text {
-            color: var(--bodyTextColorWhite);
-            margin-bottom: calc(16 / 16 * 1rem);
-        }
-
-        .cs-social {
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: calc(12 / 16 * 1rem);
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        .cs-social-link {
-            width: calc(24 / 16 * 1rem);
-            height: calc(24 / 16 * 1rem);
-            background-color: #4e4b66;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s, background-color 0.3s;
-
-            &:hover {
-                background-color: #1a1a1a;
-                transform: translateY(-0.1875rem);
-            }
-        }
-
-        .cs-social-img {
-            height: calc(13 / 16 * 1rem);
-            width: auto;
-            display: block;
         }
 
         /* Navigation Links */
