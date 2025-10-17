@@ -87,42 +87,6 @@
         color: var(--bodyTextColor);
     }
 
-    .marquee-wrapper {
-      padding: 4.8rem 0px;
-      color: white;
-    }
-
-    .marquee-text {
-      overflow: clip;
-    }
-
-    .marquee-text-track {
-      display: flex;
-      padding-left: 4.8rem; // translating 50% to the left gets messed up when using gap property, since gap property only adds space in between entries. So we add extra padding here.
-      gap: 4.8rem;
-      width: max-content;
-      animation: marquee-move-text 20s linear infinite;
-    }
-
-    .marquee-text p {
-      font-size: 2rem;
-      font-weight: 700;
-      text-wrap: nowrap;
-      color: var(--secondaryLight);
-    }
-
-    @keyframes marquee-move-text {
-      to {
-        transform: translatex(-50%)
-      }
-    }
-
-    .fadeout-horizontal {
-      mask-image: linear-gradient(
-        to right, transparent, black 5rem, black calc(100% - 5rem), transparent
-      );
-    }
-
     .cs-logo-group {
       height: 100%;
     }
@@ -144,6 +108,10 @@
     .cs-text {
         color: var(--bodyTextColorWhite);
         margin-bottom: calc(16 / 16 * 1rem);
+    }
+
+    .about-text {
+      color: #575757;
     }
 
     .cs-social {
@@ -193,7 +161,7 @@
         display: inline-block;
         background-color: var(--primary);
         width: auto;
-        padding: 0.8rem calc(32 / 16 * 1rem);
+        padding: 0.782rem calc(32 / 16 * 1rem);
         text-decoration: none;
         text-transform: uppercase;
         font-size: calc(16 / 16 * 1rem);
@@ -275,6 +243,41 @@
             width: 0;
             transition: width 0.3s;
         }
+    }
+
+    .cs-whatsapp-button {
+        display: Flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.43rem 1rem;
+        background-color: #25d366;
+        color: #075e54;
+
+                // Transition Properties
+        
+                &:hover {
+                    color: 			#25d366;
+        
+                    &:before {
+                        width: 100%;
+                    }
+                }
+        
+                &:before {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    opacity: 1;
+                    display: block;
+                    background-color: 	#dcf8c6;
+                    height: 100%;
+        
+                    //Transition properties
+                    width: 0;
+                    transition: width 0.3s;
+                }
     }
 
     // Utilities - small classes useful in various common situations
@@ -1184,7 +1187,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cs-footer-275 {
-        padding: var(--sectionPadding);
+        padding: 2rem;
         background-color: #1a1a1a;
 
         .cs-container {

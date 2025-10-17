@@ -14,49 +14,15 @@
     #hero-143 {
         /* Centers button */
         text-align: center;
+        height: 100dvh;
         /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+        // padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
         /* 130px - 450px */
-        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        // padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
         position: relative;
         z-index: 1;
         /* Prevents white rectangle pseudos from overlapping the sections below */
         overflow: hidden;
-
-        // &:before {
-        //     /* Left side of the triangle */
-        //     content: "";
-        //     width: calc(500 / 16 * 1rem);
-        //     /* make really long so it covers the whole screen all the way to desktop */
-        //     height: calc(4000 / 16 * 1rem);
-        //     background: #fff;
-        //     opacity: 1;
-        //     transform: rotate(-67deg);
-        //     transform-origin: center;
-        //     position: absolute;
-        //     display: block;
-        //     bottom: calc(-2235 / 16 * 1rem);
-        //     /* this makes the right edge sit at the 50% line at all times */
-        //     right: 50%;
-        //     z-index: 0;
-        // }
-
-        // &:after {
-        //     /* Right side of the triangle */
-        //     content: "";
-        //     width: calc(500 / 16 * 1rem);
-        //     height: calc(4000 / 16 * 1rem);
-        //     background: #fff;
-        //     opacity: 1;
-        //     transform: rotate(67deg);
-        //     transform-origin: center;
-        //     position: absolute;
-        //     display: block;
-        //     bottom: calc(-2235 / 16 * 1rem);
-        //     /* this makes the left edge sit at the 50% line at all times */
-        //     left: 50%;
-        //     z-index: 0;
-        // }
 
         .cs-background {
             width: 100%;
@@ -69,29 +35,19 @@
 
             &:before {
                 // /* Overlay */
-                // content: "";
-                // width: 100%;
-                // height: 100%;
-                // background: #000;
-                // opacity: 0.7;
-                // position: absolute;
-                // display: block;
-                // top: 0;
-                // left: 0;
-                // z-index: 1;
-                // /* prevents the cursor from interacting with it */
-                // pointer-events: none;
-
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: #727272;
+                background: #000;
+                opacity: 0.7;
                 position: absolute;
                 display: block;
                 top: 0;
                 left: 0;
                 z-index: 1;
+                // /* prevents the cursor from interacting with it */
                 pointer-events: none;
+
             }
 
             img {
@@ -106,36 +62,37 @@
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
+            max-width: 80rem;
             margin: auto;
+            margin-top: 28vh;
         }
 
         .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: center;
-            max-width: calc(829 / 16 * 1rem);
-            /* 16px - 24px */
-            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
-            color: #fff;
-            position: relative;
+          /* 39px - 61px */
+          font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+          font-weight: 700;
+          line-height: 1.2em;
+          text-align: center;
+          max-width: calc(829 / 16 * 1rem);
+          /* 16px - 24px */
+          margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+          color: #fff;
+          position: relative;
 
-            &:after {
-                /* Divider Line */
-                content: "";
-                /* 60px - 100px */
-                width: clamp(3.75rem, 9.5vw, 6.25rem);
-                /* 4px - 8px */
-                height: clamp(0.25rem, 0.8vw, 0.5rem);
-                /* 16px - 24px */
-                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-                background: var(--primary);
-                opacity: 1;
-                position: relative;
-                display: block;
-            }
+          &:after {
+              /* Divider Line */
+              content: "";
+              /* 60px - 100px */
+              width: clamp(3.75rem, 9.5vw, 6.25rem);
+              /* 4px - 8px */
+              height: clamp(0.25rem, 0.8vw, 0.5rem);
+              /* 16px - 24px */
+              margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
+              background: var(--secondaryLight);
+              opacity: 1;
+              position: relative;
+              display: block;
+          }
         }
 
         .cs-text {
@@ -156,8 +113,9 @@
 
 /* Desktop - 1300px (To make image background parallax) */
 @media only screen and (min-width: 81.25rem) {
+
     #hero-143 {
-        // background: url("/assets/images/landing.jpg");
+        background: url("/assets/images/hero.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -186,20 +144,21 @@
         z-index: 10;
 
         .cs-card-group {
-            width: 100%;
-            max-width: calc(465 / 16 * 1rem);
-            margin: 0 auto 0;
-            /* negative margin pulls it up on top of the hero section */
-            /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
-            to make the value negative since clamp doesn't work with negative values */
-            margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
-            /* 40px - 60px top and bottom, 16px - 44px left & right */
-            padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 5.3vw, 2.75rem);
-            box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
-            border-radius: calc(5 / 16 * 1rem);
-            background-color: #fff;
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
+          width: 100%;
+          max-width: calc(465 / 16 * 1rem);
+          margin: 0 auto 0;
+          /* negative margin pulls it up on top of the hero section */
+          /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+          to make the value negative since clamp doesn't work with negative values */
+          margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
+          /* 40px - 60px top and bottom, 16px - 44px left & right */
+          padding: clamp(1rem, 4.7vw, 1.5rem) clamp(1rem, 5.3vw, 2rem);
+          box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+          border-radius: calc(5 / 16 * 1rem);
+          // border-top: 8px solid var(--secondaryLight);
+          background-color: #0000004f;
+          /* prevents padding and border from affecting height and width */
+          box-sizing: border-box;
         }
 
         .cs-item {
@@ -215,32 +174,32 @@
 
         .cs-icon {
             /* 68px - 88px */
-            width: clamp(4.25rem, 8.8vw, 5.5rem);
+            width: clamp(3.5rem, 8.8vw, 4.5rem);
             /* 68px - 88px */
-            height: clamp(4.25rem, 8.8vw, 5.5rem);
+            height: clamp(3.5rem, 8.8vw, 4.5rem);
             margin: auto;
             /* 20px - 24px */
-            margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
-            // background: var(--primary);
-            // border-radius: 50%;
+            margin-bottom: clamp(0.5rem, 4vw, 1.25rem);
+            background: #f3f338a1;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
 
             img {
                 /* 44px - 52px */
-                width: clamp(2.75rem, 5.8vw, 3.25rem);
+                width: clamp(2.5rem, 5.8vw, 1.25rem);
                 height: auto;
             }
         }
 
-        .cs-title {
+        .cs-title-small {
             font-size: calc(20 / 16 * 1rem);
             line-height: 1.2em;
             text-transform: uppercase;
             text-align: center;
             margin: 0 auto calc(8 / 16 * 1rem);
-            color: var(--headerColor);
+            color: white;
         }
 
         .cs-text {
@@ -249,7 +208,11 @@
             line-height: 1.5em;
             max-width: calc(360 / 16 * 1rem);
             margin: 0 auto;
-            color: var(--bodyTextColor);
+            color: #c5c5c5;
+        }
+
+        .about-text {
+          color: #575757;
         }
     }
 }
@@ -260,8 +223,8 @@
         .cs-card-group {
             max-width: calc(784 / 16 * 1rem);
             /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
-               to make the value negative since clamp doesn't work with negative values */
-            margin-top: calc(clamp(4.75rem, 20vw, 20rem) * -1);
+              to make the value negative since clamp doesn't work with negative values */
+            margin-top: calc(clamp(4.75rem, 30vw, 20rem) * -1);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -284,14 +247,8 @@
     #h-services-143 {
         .cs-card-group {
             max-width: calc(1280 / 16 * 1rem);
-            flex-wrap: wrap;
-            gap: 4rem;
-        
-          .cs-card-group-group {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-          }
+            flex-wrap: nowrap;
+            align-items: unset;
         }
 
         .cs-item {
