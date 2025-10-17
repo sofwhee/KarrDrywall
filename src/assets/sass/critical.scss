@@ -156,7 +156,8 @@
           box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
           border-radius: calc(5 / 16 * 1rem);
           // border-top: 8px solid var(--secondaryLight);
-          background-color: #0000004f;
+          background: rgb(55 55 55);
+          // background-color: #0000004f;
           /* prevents padding and border from affecting height and width */
           box-sizing: border-box;
         }
@@ -249,6 +250,7 @@
             max-width: calc(1280 / 16 * 1rem);
             flex-wrap: nowrap;
             align-items: unset;
+            background-color: #0000004f;
         }
 
         .cs-item {

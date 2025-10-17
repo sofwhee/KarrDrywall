@@ -66,6 +66,12 @@
         display: block;
     }
 
+    .cs-header-title {
+      text-decoration-color: var(--secondary);
+      font-size: 32px;
+      font-weight: 900;
+    }
+
     .cs-title {
         font-size: var(--headerFontSize);
         font-weight: 900;
@@ -246,10 +252,6 @@
     }
 
     .cs-whatsapp-button {
-        display: Flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.43rem 1rem;
         background-color: #25d366;
         color: #075e54;
 
@@ -271,13 +273,26 @@
                     content: "";
                     opacity: 1;
                     display: block;
-                    background-color: 	#dcf8c6;
+                    background-color: 	#075e54;
                     height: 100%;
         
                     //Transition properties
                     width: 0;
                     transition: width 0.3s;
                 }
+    }
+
+    .cs-whatsapp-logo-container {
+      display: inline-block;
+      position: relative;
+      height: 0px;
+      width: 1rem;
+    }
+
+    .cs-whatsapp-logo {
+      position: absolute;
+      right: 0;
+      top: -18px;
     }
 
     // Utilities - small classes useful in various common situations
@@ -436,9 +451,10 @@
         .cs-container {
             width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
         }
+      
 
         .cs-logo {
             width: 40%;
@@ -884,12 +900,6 @@
 
         .cs-toggle {
             display: none;
-        }
-
-        .cs-header-title {
-            text-decoration-color: var(--secondary);
-            font-size: 32px;
-            font-weight: 900;
         }
 
         .cs-logo {
