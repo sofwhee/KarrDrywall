@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
     // Learn more: https://www.11ty.dev/docs/copy/
     // ═════════════════════════════════════════════════════════════════════════
 
-    eleventyConfig.addPassthroughCopy({ "./src/assets" }); // Static assets
+    eleventyConfig.addPassthroughCopy("./src/assets"); // Static assets
     eleventyConfig.addPassthroughCopy("./src/admin"); // CMS admin files
     eleventyConfig.addPassthroughCopy("./src/_redirects"); // Redirect rules
 
