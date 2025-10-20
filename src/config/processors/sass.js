@@ -15,7 +15,7 @@ const processor = postcss([autoprefixer(), ...(isProduction ? [cssnano({ preset:
 
 module.exports = async function () {
     // Make the public CSS directory
-    fs.mkdirSync("./docs/assets/css", { recursive: true });
+    fs.mkdirSync("./public/assets/css", { recursive: true });
 
     // Get SASS files
     const filenames = await glob("src/assets/sass/**/*.scss");
@@ -31,8 +31,8 @@ module.exports = async function () {
     const processPromises = sassFiles.map(async (file) => {
         try {
             const filename = path.basename(file.path, path.extname(file.path));
-            const cssPath = `./docs/assets/css/${filename}.css`;
-            const mapPath = `./docs/assets/css/${filename}.css.map`;
+            const cssPath = `./public/assets/css/${filename}.css`;
+            const mapPath = `./public/assets/css/${filename}.css.map`;
 
             // Step 1 - Compile the SCSS. Generate a source map if we're in development
             const sassResult = sass.compile(file.path, {

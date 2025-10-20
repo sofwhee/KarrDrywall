@@ -1,27 +1,28 @@
 {
-    "name": "Intermediate-Website-Kit-SASS",
-    "version": "2.0.0",
-    "description": "The official CodeStitch Intermediate kit, featuring 11ty, Decap CMS and SASS - all set up for you! Perfect for websites of all sizes.",
+    "name": "Karr Drywall Inc",
+    "version": "1.0.0",
+    "description": "Karr Brothers Drywall's business website.",
     "main": "index.js",
     "scripts": {
         "watch:cms": "npx decap-server",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "build-ghpages": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=KarrDrywall",
+        "build-ghpages": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=/KarrDrywall/",
         "start": "run-p watch:*",
+        "start-ghpages": "npx @11ty/eleventy --pathprefix=/KarrDrywall/ --serve --quiet",
         "build": "npx @11ty/eleventy --pathprefix=/KarrDrywall/"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.git"
+        "url": "git://github.com/sofwhee/KarrDrywall.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Sofia Sola",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/issues"
+        "url": "https://github.com/sofwhee/KarrDrywall"
     },
-    "homepage": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS#readme",
+    "homepage": "https://github.com/sofwhee/KarrDrywall#readme",
     "dependencies": {
         "@11ty/eleventy": "^3.1.2",
         "@codestitchofficial/eleventy-plugin-minify": "^1.1.3",

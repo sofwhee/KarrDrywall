@@ -7,7 +7,7 @@ module.exports = async function () {
     const files = await glob("src/assets/js/**/*.js");
     await esbuild.build({
         entryPoints: files,
-        outdir: "./docs/assets/js",
+        outdir: "./public/assets/js",
         write: true,
         bundle: true,
         minify: isProduction,

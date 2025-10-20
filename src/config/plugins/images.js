@@ -1,4 +1,4 @@
 module.exports = {
     urlPath: "/assets/images",
-    outputDir: "docs/assets/images",
+    outputDir: "public/assets/images",
 };
