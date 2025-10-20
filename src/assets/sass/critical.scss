@@ -14,11 +14,10 @@
     #hero-143 {
         /* Centers button */
         text-align: center;
-        height: 100dvh;
         /* 144px - 300px - leaving extra space for the navigation */
-        // padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+        padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
         /* 130px - 450px */
-        // padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
         position: relative;
         z-index: 1;
         /* Prevents white rectangle pseudos from overlapping the sections below */
@@ -62,9 +61,9 @@
 
         .cs-container {
             width: 100%;
-            max-width: 80rem;
+            max-width: calc(1280 / 16 * 1rem);
             margin: auto;
-            margin-top: 28vh;
+
         }
 
         .cs-title {
@@ -156,7 +155,7 @@
           box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
           border-radius: calc(5 / 16 * 1rem);
           // border-top: 8px solid var(--secondaryLight);
-          background: rgb(55 55 55);
+          background: var(--primary);
           // background-color: #0000004f;
           /* prevents padding and border from affecting height and width */
           box-sizing: border-box;
@@ -181,7 +180,7 @@
             margin: auto;
             /* 20px - 24px */
             margin-bottom: clamp(0.5rem, 4vw, 1.25rem);
-            background: #f3f338a1;
+            background: rgb(243 243 243);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -250,7 +249,7 @@
             max-width: calc(1280 / 16 * 1rem);
             flex-wrap: nowrap;
             align-items: unset;
-            background-color: #0000004f;
+            background-color: var(--primary);
         }
 
         .cs-item {

@@ -17,7 +17,7 @@
         --primary: #223770;
         --primaryLight: #264fc2;
         --secondary: #eeee1d;
-        --secondaryLight: #fcfca0;
+        --secondaryLight: #e5e56e;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
@@ -68,7 +68,7 @@
 
     .cs-header-title {
       text-decoration-color: var(--secondary);
-      font-size: 32px;
+      font-size: clamp(1.2rem, 2vw, 3rem);
       font-weight: 900;
     }
 
@@ -126,8 +126,8 @@
     }
 
     .cs-social-link {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
         background-color: #4e4b66;
         border-radius: 50%;
         display: flex;
@@ -146,6 +146,25 @@
         height: 1rem;
         width: auto;
         display: block;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+    }
+
+    .cs-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--primary);
+
+        picture img {
+          display: block;
+        }
     }
 }
 
@@ -249,6 +268,12 @@
             width: 0;
             transition: width 0.3s;
         }
+    }
+
+    .cs-hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.3rem;
     }
 
     .cs-whatsapp-button {
@@ -973,25 +998,6 @@
                 bottom: calc(0 / 16 * 1rem);
                 left: 0;
                 transition: width 0.3s;
-            }
-        }
-
-        .contact {
-          display: flex;
-          align-items: center;
-          gap: 2.4rem;
-        }
-
-        .cs-phone {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 20px;
-            font-weight: 900;
-            color: var(--primary);
-
-            picture img {
-              display: block;
             }
         }
     }
