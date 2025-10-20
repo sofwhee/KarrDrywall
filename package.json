@@ -7,7 +7,7 @@
         "watch:cms": "npx decap-server",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "build-ghpages": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=/KarrDrywall/",
+        "build-ghpages": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=KarrDrywall",
         "start": "run-p watch:*",
         "build": "npx @11ty/eleventy --pathprefix=/KarrDrywall/"
     },
