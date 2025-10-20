@@ -1,5 +1,5 @@
 {
-    "name": "Karr Drywall Inc",
+    "name": "KarrDrywallInc",
     "version": "1.0.0",
     "description": "Karr Brothers Drywall's business website.",
     "main": "index.js",
@@ -9,7 +9,6 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "build-ghpages": "env NODE_ENV=production npx @11ty/eleventy --pathprefix=/KarrDrywall/",
         "start": "run-p watch:*",
-        "start-ghpages": "npx @11ty/eleventy --pathprefix=/KarrDrywall/ --serve --quiet",
         "build": "npx @11ty/eleventy --pathprefix=/KarrDrywall/"
     },
     "repository": {
