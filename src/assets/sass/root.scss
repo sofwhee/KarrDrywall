@@ -1213,8 +1213,8 @@
             max-width: calc(550 / 16 * 1rem);
             margin: auto;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             column-gap: calc(88 / 16 * 1rem);
             row-gap: calc(32 / 16 * 1rem);
@@ -1324,12 +1324,6 @@
             row-gap: 0;
         }
 
-        .cs-contact {
-            flex-direction: row;
-            justify-content: space-between;
-            border-top: none;
-        }
-
         .cs-contact-li {
             margin: 0;
         }
@@ -1339,11 +1333,6 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #cs-footer-275 {
-        .cs-container {
-            /* pushes all flex children to the top */
-            align-items: flex-start;
-            justify-content: flex-end;
-        }
 
         .cs-logo-group {
             /* pushes everything to the right of it as far as possible in a flexbox */
