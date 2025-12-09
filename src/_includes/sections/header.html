@@ -18,12 +18,6 @@
                   </a>
               </div>
             </div>
-            <div class="cs-phone">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/phone.svg" alt="icon" width="26" height="26" aria-hidden="true">
-                </picture>
-                (239) 634-7195
-            </div>
             
             <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
             
@@ -34,6 +28,25 @@
               </picture>
               Whatsapp
             </a>
+
+            <div class="cs-phone">
+              <picture class="cs-icon">
+                <img loading="lazy" decoding="async" src="/assets/svgs/phone.svg" alt="icon" width="26" height="26" aria-hidden="true">
+              </picture>
+    
+              <div class="cs-phone-listings">
+                <div class="cs-phone-listing">
+                  <div class="cs-phone-text">Office</div>
+                  {{ client.phoneFormatted }}
+                </div>
+    
+                <div class="cs-phone-listing">
+                  <div class="cs-phone-text">CGC</div>
+                  {{ client.phoneFormatted2 }}
+                </div>
+              </div>
+    
+            </div>
         </div>
 
     </div>
