@@ -154,7 +154,25 @@
       align-items: center;
       gap: 1.3rem;
     }
-}
+
+    .cs-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      color: var(--primary);
+
+      picture img {
+        display: block;
+      }
+
+      .cs-phone-listing {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+      }
+  }
+    }
 
 /* Components + Utilities */
 @media only screen and (min-width: 0rem) {
@@ -875,24 +893,6 @@
                 }
             }
         }
-    }
-
-    .cs-phone {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      color: var(--primary);
-
-      picture img {
-        display: block;
-      }
-    }
-
-    .cs-phone-listing {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
     }
 }
 
